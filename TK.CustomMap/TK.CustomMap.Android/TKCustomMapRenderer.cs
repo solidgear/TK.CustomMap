@@ -74,7 +74,6 @@ namespace TK.CustomMap.Droid
                 this._googleMap.MapLongClick -= OnMapLongClick;
                 this._googleMap.MarkerDragEnd -= OnMarkerDragEnd;
                 this._googleMap.MarkerDrag -= OnMarkerDrag;
-                this._googleMap.CameraChange -= OnCameraChange;
                 this._googleMap.MarkerDragStart -= OnMarkerDragStart;
                 this._googleMap.InfoWindowClick -= OnInfoWindowClick;
                 this._googleMap.MyLocationChange -= OnUserLocationChange;
@@ -169,7 +168,6 @@ namespace TK.CustomMap.Droid
             this._googleMap.MapLongClick += OnMapLongClick;
             this._googleMap.MarkerDragEnd += OnMarkerDragEnd;
             this._googleMap.MarkerDrag += OnMarkerDrag;
-            this._googleMap.CameraChange += OnCameraChange;
             this._googleMap.MarkerDragStart += OnMarkerDragStart;
             this._googleMap.InfoWindowClick += OnInfoWindowClick;
             this._googleMap.MyLocationChange += OnUserLocationChange;
@@ -230,18 +228,7 @@ namespace TK.CustomMap.Droid
         {
             this._isDragging = true;
         }
-        /// <summary>
-        /// When the camera position changed
-        /// </summary>
-        /// <param name="sender">Event Sender</param>
-        /// <param name="e">Event Arguments</param>
-        private void OnCameraChange(object sender, GoogleMap.CameraChangeEventArgs e)
-        {
-            if(this.FormsMap == null) return;
-
-            this.FormsMap.MapCenter = e.Position.Target.ToPosition();
-            base.OnCameraChange(e.Position);
-        }
+        
         /// <summary>
         /// When a pin gets clicked
         /// </summary>
