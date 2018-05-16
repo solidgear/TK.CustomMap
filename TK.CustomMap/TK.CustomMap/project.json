@@ -2,9 +2,9 @@
   "supports": {},
   "dependencies": {
     "Microsoft.Net.Http": "2.2.29",
-    "Newtonsoft.Json": "10.0.3",
-    "Xamarin.Forms": "2.3.4.270",
-    "Xamarin.Forms.Maps": "2.3.4.270"
+    "Newtonsoft.Json": "11.0.2",
+    "Xamarin.Forms": "3.0.0.482510",
+    "Xamarin.Forms.Maps": "3.0.0.482510"
   },
   "frameworks": {
     ".NETPortable,Version=v4.5,Profile=Profile259": {}
